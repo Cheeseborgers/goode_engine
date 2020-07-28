@@ -29,8 +29,6 @@ void Entity::createHitboxComponent(sf::Sprite &sprite,
     float offsetX, float offsetY, float width, float height)
 {
     /****************************************************
-    * @return void
-     *
     * @brief Creates an Hitbox component to the Entity.
     *
     * @param &sprite: Reference to the Entities sprite.
@@ -38,6 +36,8 @@ void Entity::createHitboxComponent(sf::Sprite &sprite,
     * @param offsetY: Y offset of the Hitbox from Entity sprite.
     * @param width: Width of the Entities Hitbox.
     * @param height: Height of the Entities Hitbox.
+    *
+    * @return void
     *****************************************************/
 
     mHitbox = std::make_unique<HitboxComponent>(sprite,
@@ -49,13 +49,13 @@ void Entity::createMovementComponent(
 {
     // TODO FIX THESE COMMENTS =================================================
     /***************************************************
-     * @return void
-     *
      * @brief Creates an Movement component to the entity.
      *
      * @param velocityMax
      * @param acceleration
      * @param deceleration
+     *
+     * @return void
      ***************************************************/
 
     mMovement = std::make_unique<MovementComponent>(
